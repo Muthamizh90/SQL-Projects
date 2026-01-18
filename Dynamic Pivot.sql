@@ -1,4 +1,7 @@
+--Use database
 use test;
+
+
 
 select * from sales_dataset;
 
@@ -23,3 +26,4 @@ SET @pivotquery =
 				SUM(TotalAmount) FOR Category IN (' + @pivotcols + ')) AS PVT';
 
 EXEC sp_executesql @pivotquery;
+
